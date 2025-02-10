@@ -142,10 +142,10 @@ if __name__ == '__main__':
                         help='use cudnn-benchmark? (default false)') 
     
 
-    dir_yaml = os.path.splitext('model_config_RawNet')[0] + '.yaml'
-
+    #dir_yaml = os.path.splitext('model_config_RawNet')[0] + '.yaml'
+    dir_yaml = os.path.join(os.path.dirname(__file__), 'model_config_RawNet.yaml')
     with open(dir_yaml, 'r') as f_yaml:
-            parser1 = yaml.load(f_yaml)
+        parser1 = yaml.load(f_yaml, Loader=yaml.SafeLoader)
 
     if not os.path.exists('models'):
         os.mkdir('models')

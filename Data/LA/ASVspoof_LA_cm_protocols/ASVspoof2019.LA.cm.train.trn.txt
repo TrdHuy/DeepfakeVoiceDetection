@@ -1,0 +1,10 @@
+LA_0079 LA_T_1138215 - - bonafide
+LA_0079 LA_T_1271820 - - bonafide
+LA_0079 LA_T_1272637 - - bonafide
+LA_0079 LA_T_1276960 - - bonafide
+LA_0079 LA_T_1341447 - - bonafide
+LA_0085 LA_T_1002656 - A01 spoof
+LA_0090 LA_T_1001169 - A01 spoof
+LA_0098 LA_T_1000648 - A01 spoof
+LA_0098 LA_T_1001718 - A01 spoof
+LA_0080 LA_T_1001074 - A03 spoof
