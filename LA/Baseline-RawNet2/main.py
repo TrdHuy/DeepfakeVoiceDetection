@@ -16,6 +16,14 @@ __author__ = "Hemlata Tak"
 __email__ = "tak@eurecom.fr"
 __credits__ = ["Jose Patino", "Massimiliano Todisco", "Jee-weon Jung"]
 
+print(f"GPU Available: {torch.cuda.is_available()}")
+print(f"CUDA Version: {torch.version.cuda}")
+print(f"PyTorch Version: {torch.__version__}")
+print(f"GPU Count: {torch.cuda.device_count()}")
+print(f"Current Device: {torch.cuda.current_device()}")
+print(f"Device Name: {torch.cuda.get_device_name(0)}")
+print(f"Memory Allocated: {torch.cuda.memory_allocated(0) / 1024**2} MB")
+print(f"Memory Cached: {torch.cuda.memory_reserved(0) / 1024**2} MB")
 
 def evaluate_accuracy(dev_loader, model, device):
     num_correct = 0.0
@@ -226,6 +234,7 @@ if __name__ == '__main__':
     writer = SummaryWriter('logs/{}'.format(model_tag))
     best_acc = 99
     for epoch in range(num_epochs):
+        print(f"Model is on device: {next(model.parameters()).device}")
         running_loss, train_accuracy = train_epoch(train_loader,model, args.lr,optimizer, device)
         valid_accuracy = evaluate_accuracy(dev_loader, model, device)
         writer.add_scalar('train_accuracy', train_accuracy, epoch)
