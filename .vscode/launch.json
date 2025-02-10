@@ -14,7 +14,9 @@
                     "--track=LA",
                     "--loss=CCE",
                     "--lr=0.0001",
-                    "--batch_size=32"
+                    "--batch_size=1",
+                    "--database_path=C:\\Users\\Hp\\Desktop\\temp\\CudaTest\\2021-main\\Data\\LA\\",
+                    "--protocols_path=C:\\Users\\Hp\\Desktop\\temp\\CudaTest\\2021-main\\Data\\LA\\"
                ]
           }
      ]
